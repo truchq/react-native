@@ -131,6 +131,12 @@ RCT_EXTERN void RCTRegisterModule(Class);
  */
 - (void)_immediatelyCallTimer:(NSNumber *)timer;
 
+/**
+ * Called on the child bridge to run the executor and start loading
+ * the partial bundle
+ */
+- (void)lazyStart;
+
 @end
 
 @interface RCTBridge (Inspector)

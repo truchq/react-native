@@ -317,5 +317,9 @@ RCT_EXTERN void RCTEnableTurboModuleBlockCopy(BOOL enabled);
 - (void)loadAndExecuteSplitBundleURL:(NSURL *)bundleURL
                              onError:(RCTLoadAndExecuteErrorBlock)onError
                           onComplete:(dispatch_block_t)onComplete;
+/**
+ * Load a custom bundle into an existing bridge instance
+ */
+- (void)loadCustomBundle:(NSString *)bundleName;
 
 @end

@@ -427,5 +427,10 @@ RCT_NOT_IMPLEMENTED(-(instancetype)init)
 {
   [self.batchedBridge loadAndExecuteSplitBundleURL:bundleURL onError:onError onComplete:onComplete];
 }
+-(void)loadCustomBundle:(NSString *)bundleName
+{
+  _bundleURL = [NSBundle.mainBundle URLForResource:bundleName withExtension:@"jsbundle"];
 
+  [self.batchedBridge lazyStart];
+}
 @end
